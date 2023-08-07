@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Kat's Home for Cats</title>
+  <meta name="description" content="Home living: An alternative to boarding. Kat's Home for Cats is a cat-minding service for one owner at a time. We can look after 1 or 2cats for the owner, which means cats don't have to interact with other cats, and health issues from contact with other cats are avoided." />
+  <link rel="canonical" href="https://www.katshomeforcats.com.au/" />
+  <link rel="stylesheet" href="global.css" />
+  <link rel="stylesheet" href="book.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;400;600&display=swap");
+  </style>
+</head>
+
+<body class="post-page">
+
+  <div id="skip" class="skip">
+    <a href="#scroll" class="sr-only">Jump to Main</a>
+  </div>
+  <!-- END Skip -->
+
+  <div id="fixed" class="fixed">
+    <header class="site-header">
+      <img class="site-logo" src="./images/kat-logo2.svg" alt="logo" />
+      <div class="brand">
+        <h1 class="site-title">
+          <span class="kh4c">Kat's Home for Cats</span>
+        </h1>
+        <p class="site-tag">Home living: An alternative to boarding</p>
+      </div>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="main-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="catcare.html">Cat care</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="#About">About</a></li>
+          <li class="book-button"><a href="book.html">Book now</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div> <!-- END Fixed -->
+
+  <div id="scroll" class="scroll">
+    <section class="main">
+      <img class="section-img" src="./images/cat-walk-right.png" alt="" />
+      <h1 class="section-head">Request a booking</h1>
+      <div class="formbold-main-wrapper">        
+        <div class="formbold-form-wrapper">
+          
+          <form method="post" action="https://www.katshomeforcats.com.au/cgi-bin/formmail.cgi" onsubmit="return checkform(this);"> 
+            <!-- booking@katshomeforcats.com.au -->
+            <input type=hidden name="recipient" value="lovithobbie@hotmail.com">
+            <input type=hidden name="subject" value="Booking request">
+            <input type=hidden name="required" value="email,phone">
+            <div class="formbold-input-flex">
+              <div>
+                <label for="firstname" class="formbold-form-label">First name:</label>
+                <input type="text" name="firstname" id="firstname" placeholder="Kitty"
+                class="formbold-form-input" />
+              </div>
+              <div>
+                <label for="lastname" class="formbold-form-label">Last name:</label>
+                <input type="text" name="lastname" id="lastname" placeholder="Kattus"
+                class="formbold-form-input" />
+              </div>
+            </div>
+            <div class="formbold-input-flex-wide">
+              <div>
+                <label for="email" class="formbold-form-label">Email:</label>
+                <input type="email" name="email" id="email" placeholder="kitkat@mail.com"
+                class="formbold-form-input" />
+              </div>
+            </div>
+            <div class="formbold-input-flex">
+              <div>
+                <label for="phone" class="formbold-form-label">Phone:</label>
+                <input type="text" name="phone" id="phone" placeholder="0400 555 999"
+                class="formbold-form-input" />
+              </div>
+              <div>
+                <label for="guest" class="formbold-form-label">How many cats (1 or 2)?</label>
+                <input type="number" name="guest" id="guest" placeholder="1"
+                  class="formbold-form-input" />
+              </div>
+            </div>  
+
+            <div class="formbold-input-flex">
+              <div>
+                <label for="date" class="formbold-form-label">Date from:</label>
+                <input type="date" name="datefrom" id="datefrom"
+                  class="formbold-form-input" />
+              </div>
+              <div>
+                <label for="date" class="formbold-form-label">Date to:</label>
+                <input type="date" name="dateto" id="dateto"
+                  class="formbold-form-input" />
+              </div>
+            </div>        
+
+            <div class="formbold-input-radio-wrapper">
+              <div class="formbold-checkbox-wrapper">
+                <label for="catVaxxed" class="formbold-checkbox-label">
+                  <div class="formbold-relative">
+                    <input type="checkbox" id="catVaxxed" class="formbold-input-checkbox" />
+                  </div>
+                  My cat is Fully vaccinated</a>
+                </label>
+              </div> <!-- END Vaccination checkbox -->
+        
+              <div class="formbold-checkbox-wrapper">
+                <label for="catWormed" class="formbold-checkbox-label">
+                  <div class="formbold-relative">
+                    <input type="checkbox" id="catWormed" class="formbold-input-checkbox" />
+                  </div>
+                  My cat has been treated for worms/fleas</a>
+                </label>
+              </div> <!-- END Vaccination checkbox -->
+        
+              <div class="formbold-checkbox-wrapper">
+                <label for="catInsured" class="formbold-checkbox-label">
+                  <div class="formbold-relative">
+                    <input type="checkbox" id="catInsured" class="formbold-input-checkbox" />
+                  </div>
+                  My cat has pet insurance</a>
+                </label>
+              </div> <!-- END Vaccination checkbox -->
+
+              <div class="formbold-input-flex-wide margin-top">
+                <div>
+                  <label for="allergies" class="formbold-form-label">List any allergies, medical conditions and/or medications:</label>
+                  <input type="text" name="allergies" id="allergies" placeholder=""
+                  class="formbold-form-input" />
+                </div>
+              </div>  
+
+            </div>
+    
+            <div>
+              <label for="message" class="formbold-form-label">Message:</label>
+              <textarea rows="6" name="message" id="message" placeholder="Type your message"
+                class="formbold-form-input"></textarea>
+            </div>
+            
+            <div class="capbox margin-top">
+              <label for="CaptchaInput" class="formbold-form-label">Nasty robot check!</label>
+              <div id="CaptchaDiv"></div>
+              <div class="capbox-inner">Re-type the number:
+                <input type="hidden" id="txtCaptcha">
+                <input type="text" name="CaptchaInput" id="CaptchaInput" size="15">
+              </div>
+            </div> <!-- END CAPTCHA -->
+
+            <button class="formbold-btn">Send Message</button>
+          </form> <!-- END booking_form -->
+
+          <script type="text/javascript">
+            // Captcha Script
+            function checkform(theform){
+              var why = "";
+              
+              if(theform.CaptchaInput.value == ""){
+                why += "- Please enter the number.\n";
+              }
+              if(theform.CaptchaInput.value != ""){
+                if(ValidCaptcha(theform.CaptchaInput.value) == false){
+                  why += "- The number does not match.\n";
+                }
+              }
+              if(why != ""){
+                alert(why);
+                return false;
+              }
+            }
+            
+            var a = Math.ceil(Math.random() * 9)+ '';
+            var b = Math.ceil(Math.random() * 9)+ '';
+            var c = Math.ceil(Math.random() * 9)+ '';
+            var d = Math.ceil(Math.random() * 9)+ '';
+            var e = Math.ceil(Math.random() * 9)+ '';
+            
+            var code = a + b + c + d + e;
+            document.getElementById("txtCaptcha").value = code;
+            document.getElementById("CaptchaDiv").innerHTML = code;
+            
+            // Validate input against the generated number
+            function ValidCaptcha(){
+              var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+              var str2 = removeSpaces(document.getElementById('CaptchaInput').value);
+              if (str1 == str2){
+                return true;
+              } else {
+                return false;
+              }
+            }
+            
+            // Remove the spaces from the entered and generated code
+            function removeSpaces(string){
+              return string.split(' ').join('');
+            }
+            </script>
+            
+        </div>
+      </div>
+    </section> <!-- END Main -->
+
+    <section id="About" >
+      <img class="section-img" src="./images/cat-walk-right.png" alt="" />
+      <h2 class="section-tag">Happy people have cat hair on their clothes</h2>
+    </section>
+  
+    <section id="Quote" class="quote">
+      <div class="quote-row nopad">
+        <div class="foot-left">
+          <h1>Who?</h1>
+          <p><span class="kh4c">Kat's Home for Cats</span></p>
+          <p>ABN 90 855 991 754</p>
+        </div>
+        <img class="foot-logo" src="./images/kat-logo2.svg" alt="logo" />
+        <div class="foot-right">
+          <h1>Where?</h1>
+          <p>Horizon Drive</p>
+          <p>SORELL TAS 7172</p>
+        </div>
+      </div> <!-- END quote-col -->
+      <a href="#skip" class="backtop">Back to top</a>
+    </section> <!-- END Quote -->
+
+    <footer id="Footer" class="about">
+      <p class="copyright">&copy; 2023 <span class="kh4c">Kat's Home for Cats</span></p>
+    </footer>
+
+  </div> <!-- END Scroll -->
+
+</body>
+</html>
